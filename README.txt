@@ -1,7 +1,13 @@
-Template Name: Sterial
-Template Author: Untree.co
-Template License: https://creativecommons.org/licenses/by/3.0/
-Author URI: https://untree.co/
-
-Twitter: https://twitter.com/Untree_co
-Facebook: https://web.facebook.com/Untree.co/
+-Nombre del proyecto: Diseño, desarrollo e implementación de un sitio web informativo para la Asociación Pro Restauración
+-Diseñado por: Bryan A. Miranda
+-Lenguajes: HTML,CSS,SCSS,JAVASCRIPT,BOOTSTRAP
+-Versiones:
+    -HTML 5
+    -CSS 3
+    -Tiny Slider: v2.9.3 (JS)
+    -Flatpickr: v4.6.6 (JS)
+    -GLightbox: v3.0.5 (JS, detectado en el código)
+    -Bootstrap 5: v5.0.0-alpha2
+    
+-Proporción: HTML: 64.6%, CSS: 17.7%, SCSS: 12.6%, JavaScript: 5.1%
+-Link del desarrollador: https://www.linkedin.com/in/bryan-andres-candelario-miranda-9a565213a

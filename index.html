@@ -1,11 +1,5 @@
-<!-- /*
-* Template Name: Sterial
-* Template Author: Untree.co
-* Tempalte URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<!-- Required meta tags -->
@@ -327,9 +321,8 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
-
+		<!------------------- GALERIA DE FOTOS --------------------->
 		<div class="destination-slider-wrap">
 			<div class="destination-slider">
 				<div class="destination">
@@ -422,10 +415,10 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
-
+	<!------------------- FIN GALERIA DE FOTOS --------------------->
 	<div class="section">
+		<!------------------- CAROUSEL CON FOTOS DE RECUERDOS --------------------->
 		<div class="container">
 			<div class="row justify-content-between align-items-center">
 				<div class="col-lg-5 mb-4 mb-lg-0 order-lg-2" data-aos="fade-up">
@@ -484,6 +477,7 @@
 		</div>
 	</div>
 
+	<!------------------- OPINIONES --------------------->
 	<div class="section bg-light">
 		<h2 class="heading mb-5 text-center">Opiniones</h2>
 
@@ -598,7 +592,7 @@
 
 
 
-	</div> <!-- /.untree_co-section -->
+	</div>
 
 
 
@@ -690,6 +684,17 @@
 			<div class="row">
 				<div class="col-lg-7 text-center mb-3 mb-lg-0 text-lg-start">
 					<h3 class="text-white m-0">¿Qué esperas para visitarnos?</h3>
+					<h2>Contador de visitas global</h2>
+					<p>Esta página ha sido visitada <span id="contador"></span> veces.</p>
+
+					<script>
+						fetch("contador.php")
+							.then(response => response.json())
+							.then(data => {
+								document.getElementById("contador").innerText = data.visitas;
+							});
+					</script>
+					
 				</div>
 				<div class="col-lg-5 text-center text-lg-end">
 					<a href="https://maps.app.goo.gl/igahWh24zUasGTmQA" target="_blank" class="btn btn-outline-white">
@@ -719,14 +724,15 @@
 					<div class="widget">
 						<h3>Conectar</h3>
 						<ul class="list-unstyled social">
-							<li><a href="#"><span class="icon-instagram"></span></a></li>
-							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="https://www.instagram.com/asocate.503?igsh=Z24wNzI1Z21xMWZs"
+									target="_blank"><span class="icon-instagram"></span></a></li>
+							<li><a href="https://www.threads.com/@asocate.503" target="_blank"><span
+										class="icon-tumblr"></span></a></li>
 							<li><a href="https://www.facebook.com/Asocprocate" target="_blank"><span
-										class="icon-facebook"></span></a>
-							</li>
-							<li><a href="#" target="_blank"><span class="icon-linkedin"></span></a></li>
+										class="icon-facebook"></span></a></li>
+							<!-- <li><a href="#" target="_blank"><span class="icon-linkedin"></span></a></li>
 							<li><a href="#" target="_blank"><span class="icon-pinterest"></span></a></li>
-							<li><a href="#" target="_blank"><span class="icon-dribbble"></span></a></li>
+							<li><a href="#" target="_blank"><span class="icon-dribbble"></span></a></li> -->
 						</ul>
 					</div> <!-- /.widget -->
 				</div> <!-- /.col-lg-3 -->

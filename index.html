@@ -684,34 +684,18 @@
 			<div class="row">
 				<div class="col-lg-7 text-center mb-3 mb-lg-0 text-lg-start">
 					<h3 class="text-white m-0">¿Qué esperas para visitarnos?</h3>
-					<div class="card shadow-lg rounded-3 text-center p-4" style="max-width: 400px;">
+					<div class="card shadow-lg rounded-3 text-center p-4" style="max-width: 400px; margin:auto;">
 						<h4 class="card-title mb-3">👋 Bienvenido</h4>
 						<p class="card-text">Este sitio ha sido visitado:</p>
 
-						<!-- Contenedor del contador -->
-						<div id="contadorContainer"></div>
+						<!-- Visitor Badge -->
+						<img src="https://visitor-badge.glitch.me/badge?page_id=asociacionprorestauracion.inicio"
+							alt="Contador de visitas" class="mx-auto d-block" style="max-width:200px;" />
+
+						<p class="text-muted mt-2">veces</p>
 					</div>
 
-					<script>
-						const contadorContainer = document.getElementById("contadorContainer");
 
-						// Detectamos si estamos en localhost
-						if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-							// Contador local usando localStorage
-							let visitas = localStorage.getItem("visitas");
-							visitas = visitas ? parseInt(visitas) + 1 : 1;
-							localStorage.setItem("visitas", visitas);
-
-							// Mostramos el contador local
-							contadorContainer.innerHTML = `<h2 class="text-primary fw-bold">${visitas}</h2><p class="text-muted">veces (solo en este navegador)</p>`;
-						} else {
-							// Contador global usando Visitor Badge
-							contadorContainer.innerHTML = `
-        <img src="https://visitor-badge.glitch.me/badge?page_id=asociacionprorestauracion.asociacionprorestauracion" 
-             alt="Contador de visitas" class="mx-auto d-block" style="max-width:200px;" />
-      `;
-						}
-					</script>
 
 				</div>
 				<div class="col-lg-5 text-center text-lg-end">

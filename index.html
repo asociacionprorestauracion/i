@@ -684,11 +684,28 @@
 			<div class="row">
 				<div class="col-lg-7 text-center mb-3 mb-lg-0 text-lg-start">
 					<h3 class="text-white m-0">¿Qué esperas para visitarnos?</h3>
-					<p>
-						Visitas:
-						<img src="https://visitor-badge.glitch.me/badge?page_id=asociacionprorestauracion.inicio"
-							alt="Contador de visitas">
-					</p>
+					<div class="card shadow-lg rounded-3 text-center p-4" style="max-width: 400px;">
+						<h4 class="card-title mb-3">👋 Bienvenido</h4>
+						<p class="card-text">Este sitio ha sido visitado:</p>
+						<h2 id="contador" class="text-primary fw-bold">0</h2>
+						<p class="text-muted">veces</p>
+					</div>
+
+					<script>
+						// Namespace y key únicos para tu proyecto
+						const namespace = "asocate_catedral_santa_ana";
+						const key = "visitas";
+
+						fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+							.then(res => res.json())
+							.then(data => {
+								document.getElementById("contador").innerText = data.value;
+							})
+							.catch(err => {
+								document.getElementById("contador").innerText = "Error";
+								console.error("No se pudo obtener el contador:", err);
+							});
+					</script>
 				</div>
 				<div class="col-lg-5 text-center text-lg-end">
 					<a href="https://maps.app.goo.gl/igahWh24zUasGTmQA" target="_blank" class="btn btn-outline-white">

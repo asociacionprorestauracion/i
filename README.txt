@@ -1,6 +1,7 @@
 -Nombre del proyecto: Diseño, desarrollo e implementación de un sitio web informativo para la Asociación Pro Restauración
 -Diseñado por: Bryan A. Miranda
 -Lenguajes: HTML,CSS,SCSS,JAVASCRIPT,BOOTSTRAP
+-API's: Formspree, Hits.sh
 -Versiones:
     -HTML 5
     -CSS 3
@@ -10,4 +11,4 @@
     -Bootstrap 5: v5.0.0-alpha2
     
 -Proporción: HTML: 64.6%, CSS: 17.7%, SCSS: 12.6%, JavaScript: 5.1%
--Link del desarrollador: https://www.linkedin.com/in/bryan-andres-candelario-miranda-9a565213a
+-Link del Desarrollador: https://www.linkedin.com/in/bryan-andres-candelario-miranda-9a565213a

@@ -684,23 +684,20 @@
 			<div class="row">
 				<div class="col-lg-7 text-center mb-3 mb-lg-0 text-lg-start">
 					<h3 class="text-white m-0">¿Qué esperas para visitarnos?</h3>
-						<p class="card-text text-muted">Este sitio ha sido visitado: <span id="contador">0</span> veces</p>
+					<p class="card-text text-muted">
+						Este sitio ha sido visitado: <span id="contador">0</span> veces
+					</p>
 
 					<script>
-						// Namespace y key únicos para tu proyecto
-						const namespace = "asocate_catedral_santa_ana";
-						const key = "visitas";
-
-						fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-							.then(res => res.json())
-							.then(data => {
-								document.getElementById("contador").innerText = data.value;
-							})
-							.catch(err => {
-								document.getElementById("contador").innerText = "Error";
-								console.error("No se pudo obtener el contador:", err);
-							});
+						function updateCounter(data) {
+							document.getElementById("contador").innerText = data.value;
+						}
 					</script>
+
+					<!-- Llamada a CountAPI con JSONP -->
+					<script
+						src="https://api.countapi.xyz/hit/asociacionprorestauracion.inicio/visitas?callback=updateCounter"></script>
+
 				</div>
 				<div class="col-lg-5 text-center text-lg-end">
 					<a href="https://maps.app.goo.gl/igahWh24zUasGTmQA" target="_blank" class="btn btn-outline-white">

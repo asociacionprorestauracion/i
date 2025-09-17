@@ -62,14 +62,30 @@
 			<!-- Menú -->
 			<div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
 				<ul class="navbar-nav mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
 					<li class="nav-item"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
 					<li class="nav-item"><a class="nav-link" href="services.html">Preguntas Frecuentes</a></li>
-					<li class="nav-item"><a class="nav-link" href="blog.html">Noticias</a></li>
+					<li class="nav-item"><a class="nav-link active" href="blog.html">Noticias</a></li>
 					<li class="nav-item"><a class="nav-link" href="contact.html">Contáctanos</a></li>
 				</ul>
 			</div>
+			<style>
+				/* Estilo para el nav-item activo */
+				.nav-link.active {
+					background-color: #f8f9fa;
+					/* color de fondo */
+					border: 2px solid #00060e;
+					/* borde azul (como Bootstrap primary) */
+					border-radius: 8px;
+					/* esquinas redondeadas */
+				}
 
+				.nav-link.active {
+					color: #010408 !important;
+					/* color del texto */
+					font-weight: bold;
+				}
+			</style>
 		</div>
 	</nav>
 

@@ -35,7 +35,49 @@
 
 	<title>Asoc Pro Rest | Catedral Santa Ana</title>
 </head>
+<style>
+	.header-common .top-header {
+		background: #060d1d;
+		padding: 4px;
+	}
 
+	.header-top-header p {
+		margin-bottom: 0 !important;
+	}
+
+	.header-top-header .marquee {
+		overflow: hidden;
+		position: relative;
+		height: 1.6em;
+		display: flex;
+		align-items: center;
+	}
+
+	.header-top-header .marquee span {
+		display: inline-block;
+		white-space: nowrap;
+		will-change: transform;
+		animation: marquee 12s linear infinite;
+	}
+
+	/* estilo del enlace dentro del marquee */
+	.header-top-header .marquee a {
+		display: inline-block;
+		color: #ffffff;
+		text-decoration: none;
+		padding-right: 2rem;
+	}
+
+	@keyframes marquee {
+		0% {
+			transform: translateX(100%);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+</style>
 <body>
 
 	<div class="site-mobile-menu site-navbar-target">
@@ -45,6 +87,12 @@
 			</div>
 		</div>
 		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<!-- Topbar -->
+	<div class="top-header header-top-header" style="background-color: rgb(0, 0, 0) !important;">
+		<p class="marquee"><span><a href="">¡Bienvenidos sección de Noticias de la Asociacion Pro Restauracion de la
+					Catedral de Santa Ana!</a></span></p>
 	</div>
 
 	<!-- Navbar -->

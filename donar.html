@@ -73,6 +73,67 @@
 			transform: translateX(-100%);
 		}
 	}
+
+	/* Estilos para el contenedor principal */
+	.contenedor-cuenta {
+		display: flex;
+		/* Activa Flexbox para alineación horizontal */
+		align-items: flex-start;
+		/* Alinea los elementos al inicio (arriba) */
+		padding: 20px;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		max-width: 400px;
+		/* Limita el ancho del contenedor */
+		font-family: Arial, sans-serif;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		margin: 20px auto;
+		/* Centra el div en la página */
+	}
+
+	/* Estilos para el área del icono */
+	.icono-banco {
+		margin-right: 15px;
+		padding-top: 5px;
+		/* Pequeño ajuste para centrar el icono verticalmente */
+	}
+
+	/* Estilos para el icono (Placeholder) */
+	.icono-banco i {
+		font-size: 36px;
+		color: #007bff;
+		/* Color azul para el icono */
+	}
+
+	/* Estilos para el área de datos */
+	.datos-cuenta div {
+		margin-bottom: 8px;
+		line-height: 1.2;
+	}
+
+	.datos-cuenta span {
+		font-weight: bold;
+		color: #333;
+		display: block;
+		/* Mantiene la clave (ej: Banco) en su propia línea o espacio */
+	}
+
+	.datos-cuenta p {
+		margin: 0;
+		color: #555;
+	}
+
+	.icono-banco {
+        margin-right: 15px;
+        padding-top: 5px; 
+    }
+
+    /* Nuevo estilo para la imagen del logo */
+    .icono-banco .logo-banco {
+        width: 36px;        /* Define el ancho deseado para el logo */
+        height: auto;       /* Mantiene la proporción de la imagen */
+        max-width: 100%;    /* Asegura que no se desborde */
+    }
 </style>
 
 <body>
@@ -87,7 +148,8 @@
 	</div>
 	<!-- Topbar -->
 	<div class="top-header header-top-header" style="background-color: rgb(0, 0, 0) !important;">
-		<p class="marquee"><span><a href="">¡Bienvenidos a la sección de Contacto de la Asociacion Pro Restauracion de la
+		<p class="marquee"><span><a href="">¡Bienvenidos a la sección de Donaciones de la Asociacion Pro Restauracion de
+					la
 					Catedral de Santa Ana!</a></span></p>
 	</div>
 	<!-- Navbar -->
@@ -115,8 +177,8 @@
 					<li class="nav-item"><a class="nav-link" href="sobre_nosotros.html">Sobre nosotros</a></li>
 					<li class="nav-item"><a class="nav-link" href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
 					<li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
-					<li class="nav-item"><a class="nav-link active" href="contacto.html">Contáctanos</a></li>
-					<li class="nav-item" style="margin-left: 15px;"><a class="nav-link" href="donar.html" style="background-color: #f17945; border-radius: 8px; color: white;">Donar</a></li>
+					<li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+					<li class="nav-item" style="margin-left: 15px;"><a class="nav-link active" href="donar.html">Donar</a></li>
 				</ul>
 			</div>
 			<style>
@@ -149,104 +211,56 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-start">
 				<div class="col-lg-6 mx-auto text-center">
-					<h1 class="heading" data-aos="fade-up"><b>Contáctanos</b></h1>
-					<p data-aos="fade-up"><b>El apartado de Contáctanos está diseñado para que puedas comunicarte
-							directamente con nosotros de manera rápida y sencilla. Ya sea que desees realizar una
-							consulta, solicitar información sobre la Catedral, participar en nuestras actividades o
-							colaborar con la asociación, aquí encontrarás los medios para hacerlo. Nuestro equipo estará
-							encantado de atenderte y brindarte el apoyo que necesites, porque tu participación y
-							cercanía son parte fundamental para seguir preservando este patrimonio cultural e
-							histórico.</b></p>
+					<h1 class="heading" data-aos="fade-up"><b>Donar</b></h1>
+					<p data-aos="fade-up"><b>El apartado de donaciones está diseñado para que puedas apoyar nuestra
+							causa y contribuir a la restauración de la Catedral de Santa Ana.</b></p>
 				</div>
 			</div>
 		</div>
 	</div>
 
+
+
 	<div class="section">
 		<div class="container">
 			<div class="row">
 				<div class="col-12" data-aos="fade-up" data-aos-delay="0">
-
-					<h2 class="heading mb-5">En este formulario puedes enviarnos<br> tus consultas o comentarios.</h2>
+					<h2 class="heading mb-5">A esta cuenta bancaria puedes realizar tus donaciones:</h2>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-					<div class="contact-info">
+			<div class="contenedor-cuenta">
 
-						<div class="address mt-4">
-							<i class="icon-room"></i>
-							<h4 class="mb-2">Dirección (Oficina):</h4>
-							<p>5° Avenida norte #1, entre callejuela norte y sur de la catedral de Santa Ana</p>
-						</div>
-
-						<div class="open-hours mt-4">
-							<i class="icon-clock-o"></i>
-							<h4 class="mb-2">Horarios de atención:</h4>
-							<p>
-								Lunes a Viernes:<br>
-								8:00 AM a 12:00 PM / 2:00 PM a 6:00 PM<br>
-								Sábados:<br>
-								8:00 AM a 12:00 PM<br>
-							</p>
-						</div>
-
-						<div class="email mt-4">
-							<i class="icon-envelope"></i>
-							<h4 class="mb-2">Email:</h4>
-							<p>asocprorest2025@gmail.com</p>
-						</div><br>
-
-						<div class="phone mt-4">
-							<i class="icon-phone"></i>
-							<h4 class="mb-2">Teléfonos de contacto:</h4>
-							<p>2447-3303 / 7058-9191</p>
-						</div><br>
-						<!--<div class="whatsapp mt-4">
-							<i class="icon-whatsapp"></i>
-							<h4 class="mb-2">WhatsApp:</h4>
-							<p><a href="https://wa.me/50370589191" target="_blank">7058-9191</a></p>
-						</div>-->
-
-					</div>
-				</div>
-				<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-					<form action="https://formspree.io/f/mzzaynay" method="POST">
-						<div class="row">
-							<div class="col-6 mb-3">
-								<input type="text" id="Nombre:" name="Nombre:" required="" class="form-control"
-									placeholder="Nombre"><br>
-							</div>
-							<div class="col-6 mb-3">
-								<input type="email" id="Correo:" name="Correo:" required="" class="form-control"
-									placeholder="Tu Correo Electrónico"><br>
-							</div>
-							<div class="col-12 mb-3">
-								<input type="text" id="Asunto:" name="Asunto:" required="" class="form-control"
-									placeholder="Asunto"><br>
-							</div>
-							<div class="col-12 mb-3">
-								<textarea id="Mensaje:" name="Mensaje:" rows="4" required="" class="form-control"
-									placeholder="Mensaje"></textarea>
-							</div>
-
-							<div class="col-12">
-								<button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-							</div>
-						</div>
-					</form>
-				</div>
-
-			</div>
-			<div class="row" style="margin-top: 40px;">
-				<div class="col-12 text-center">
-					<a href="https://wa.me/50370589191" target="_blank" class="btn btn-outline-success"
-						style="color: #4d5757; display: inline-flex; align-items: center; gap: 6px;">
-						<i class="fa-brands fa-whatsapp"></i>
-						Escríbenos por WhatsApp
+				<div class="icono-banco">
+					<a href="images/davivienda.png" target="_blank">
+						<img src="images/davivienda.png" alt="Logo de Davivienda" class="logo-banco">
 					</a>
 				</div>
+
+				<div class="datos-cuenta">
+
+					<div>
+						<span>Banco:</span>
+						<p>Banco Davivienda</p>
+					</div>
+
+					<div>
+						<span>Tipo de Cuenta:</span>
+						<p>Cuenta de Ahorros</p>
+					</div>
+
+					<div>
+						<span>Nombre del Titular de la cuenta:</span>
+						<p>Lidia Mercedes Peraza de Lara</p>
+					</div>
+
+					<div>
+						<span>Número de Cuenta:</span>
+						<p>106-03-03809-00</p>
+					</div>
+
+				</div>
 			</div>
+
 
 		</div>
 	</div> <!-- /.untree_co-section -->

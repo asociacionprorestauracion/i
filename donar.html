@@ -91,6 +91,23 @@
 		/* Centra el div en la página */
 	}
 
+	.contenedor-cuenta-1 {
+		display: flex;
+		/* Activa Flexbox para alineación horizontal */
+		align-items: flex-end;
+		/* Alinea los elementos a la par de contenedor-cuenta */
+		justify-content: flex-end;
+		padding: 20px;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		max-width: 400px;
+		/* Limita el ancho del contenedor */
+		font-family: Arial, sans-serif;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		margin: 40px auto;
+		/* Centra el div en la página */
+	}
+
 	/* Estilos para el área del icono */
 	.icono-banco {
 		margin-right: 15px;
@@ -124,16 +141,19 @@
 	}
 
 	.icono-banco {
-        margin-right: 15px;
-        padding-top: 5px; 
-    }
+		margin-right: 15px;
+		padding-top: 5px;
+	}
 
-    /* Nuevo estilo para la imagen del logo */
-    .icono-banco .logo-banco {
-        width: 36px;        /* Define el ancho deseado para el logo */
-        height: auto;       /* Mantiene la proporción de la imagen */
-        max-width: 100%;    /* Asegura que no se desborde */
-    }
+	/* Nuevo estilo para la imagen del logo */
+	.icono-banco .logo-banco {
+		width: 36px;
+		/* Define el ancho deseado para el logo */
+		height: auto;
+		/* Mantiene la proporción de la imagen */
+		max-width: 100%;
+		/* Asegura que no se desborde */
+	}
 </style>
 
 <body>
@@ -175,10 +195,12 @@
 				<ul class="navbar-nav mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
 					<li class="nav-item"><a class="nav-link" href="sobre_nosotros.html">Sobre nosotros</a></li>
-					<li class="nav-item"><a class="nav-link" href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+					<li class="nav-item"><a class="nav-link" href="preguntas_frecuentes.html">Preguntas Frecuentes</a>
+					</li>
 					<li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
 					<li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
-					<li class="nav-item" style="margin-left: 15px;"><a class="nav-link active" href="donar.html">Donar</a></li>
+					<li class="nav-item" style="margin-left: 15px;"><a class="nav-link active"
+							href="donar.html">Donar</a></li>
 				</ul>
 			</div>
 			<style>
@@ -196,6 +218,30 @@
 					color: #010408 !important;
 					/* color del texto */
 					font-weight: bold;
+				}
+				/* Regla para crear la línea divisoria */
+				.columna-divisora {
+					/* Define el borde derecho: 1px de ancho, sólido, y un gris claro */
+					border-right: 1px solid #ccc;
+					/* Añade un pequeño relleno a la derecha para que la línea no esté pegada al contenido */
+					padding-right: 25px !important;
+				}
+
+				/* Opcional: Ajustar el relleno de la columna derecha para el espaciado */
+				.row>.col-md-6:nth-child(2) {
+					padding-left: 25px !important;
+				}
+
+				/* Opcional: Quitar la barra divisoria en móviles para evitar problemas de diseño */
+				@media (max-width: 767.98px) {
+					.columna-divisora {
+						border-right: none;
+						border-bottom: 1px solid #eee;
+						/* Opcionalmente, poner un divisor inferior */
+						padding-right: 15px !important;
+						padding-bottom: 20px;
+						margin-bottom: 20px;
+					}
 				}
 			</style>
 		</div>
@@ -224,46 +270,70 @@
 	<div class="section">
 		<div class="container">
 			<div class="row">
-				<div class="col-12" data-aos="fade-up" data-aos-delay="0">
-					<h2 class="heading mb-5">A esta cuenta bancaria puedes realizar tus donaciones:</h2>
+
+				<div class="col-md-6 columna-divisora" data-aos="fade-up" data-aos-delay="0">
+					<h2 class="heading mb-5">A esta cuenta bancaria puedes realizar tus donaciones:</h2><br>
+
+					<div class="contenedor-cuenta">
+						<div class="icono-banco">
+							<a href="images/davivienda.png" target="_blank">
+								<img src="images/davivienda.png" alt="Logo de Davivienda" class="logo-banco">
+							</a>
+						</div>
+						<div class="datos-cuenta">
+							<div>
+								<span>Banco:</span>
+								<p>Banco Davivienda</p>
+							</div>
+							<div>
+								<span>Tipo de Cuenta:</span>
+								<p>Cuenta de Ahorros</p>
+							</div>
+							<div>
+								<span>Nombre del Titular de la cuenta:</span>
+								<p>Asociación Pro Restauración de la Catedral de Santa Ana</p>
+							</div>
+							<div>
+								<span>Número de Cuenta:</span>
+								<p>106-03-03809-00</p>
+							</div>
+						</div>
+					</div>
 				</div>
+
+				<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+					<h2 class="heading mb-5">Si deseas reportar tus donaciones puedes hacerlo por medio de este formulario:</h2>
+
+					<form action="https://formspree.io/f/mzzaynay" method="POST">
+						<div class="row">
+							<div class="col-6 mb-3">
+								<input type="text" id="Nombre:" name="Nombre:" required="" class="form-control"
+									placeholder="Nombre"><br>
+							</div>
+							<div class="col-6 mb-3">
+								<input type="email" id="Correo:" name="Correo:" required="" class="form-control"
+									placeholder="Correo Electrónico"><br>
+							</div>
+							<div class="col-12 mb-3">
+								<input type="text" id="Asunto:" name="Asunto:" required="" class="form-control"
+									placeholder="Asunto"><br>
+							</div>
+							<div class="col-12 mb-3">
+								<textarea id="Mensaje:" name="Mensaje:" rows="4" required="" class="form-control"
+									placeholder="Mensaje"></textarea>
+							</div>
+
+							<div class="col-12">
+								<button type="submit" class="btn btn-primary">Enviar</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
 			</div>
-			<div class="contenedor-cuenta">
-
-				<div class="icono-banco">
-					<a href="images/davivienda.png" target="_blank">
-						<img src="images/davivienda.png" alt="Logo de Davivienda" class="logo-banco">
-					</a>
-				</div>
-
-				<div class="datos-cuenta">
-
-					<div>
-						<span>Banco:</span>
-						<p>Banco Davivienda</p>
-					</div>
-
-					<div>
-						<span>Tipo de Cuenta:</span>
-						<p>Cuenta de Ahorros</p>
-					</div>
-
-					<div>
-						<span>Nombre del Titular de la cuenta:</span>
-						<p>Asociación Pro Restauración de la Catedral de Santa Ana</p>
-					</div>
-
-					<div>
-						<span>Número de Cuenta:</span>
-						<p>106-03-03809-00</p>
-					</div>
-
-				</div>
-			</div>
-
-
 		</div>
-	</div> <!-- /.untree_co-section -->
+
+	</div>
 
 	<div class="site-footer">
 		<div class="container">
